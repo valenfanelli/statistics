@@ -1,0 +1,83 @@
+[
+    {
+      "name": "JavaScript",
+      "popularity": 98,
+      "paradigm": ["Imperative", "Functional", "Event-Driven"],
+      "first_appeared": 1995,
+      "usage": "Web Development, Backend, Mobile Apps",
+      "official_site": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "name": "Python",
+      "popularity": 95,
+      "paradigm": ["Object-Oriented", "Functional", "Procedural"],
+      "first_appeared": 1991,
+      "usage": "AI, Data Science, Web Development",
+      "official_site": "https://www.python.org/"
+    },
+    {
+      "name": "Java",
+      "popularity": 90,
+      "paradigm": ["Object-Oriented", "Imperative"],
+      "first_appeared": 1995,
+      "usage": "Enterprise Apps, Mobile (Android), Backend",
+      "official_site": "https://www.java.com/"
+    },
+    {
+      "name": "C#",
+      "popularity": 85,
+      "paradigm": ["Object-Oriented", "Imperative"],
+      "first_appeared": 2000,
+      "usage": "Game Development, Web Apps, Windows Apps",
+      "official_site": "https://learn.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
+      "name": "C++",
+      "popularity": 80,
+      "paradigm": ["Procedural", "Object-Oriented"],
+      "first_appeared": 1985,
+      "usage": "Systems Programming, Game Development",
+      "official_site": "https://isocpp.org/"
+    },
+    {
+      "name": "Ruby",
+      "popularity": 70,
+      "paradigm": ["Object-Oriented", "Functional"],
+      "first_appeared": 1995,
+      "usage": "Web Development, Automation",
+      "official_site": "https://www.ruby-lang.org/en/"
+    },
+    {
+      "name": "Go",
+      "popularity": 75,
+      "paradigm": ["Imperative", "Concurrent"],
+      "first_appeared": 2009,
+      "usage": "Cloud Computing, Backend, Networking",
+      "official_site": "https://go.dev/"
+    },
+    {
+      "name": "Rust",
+      "popularity": 78,
+      "paradigm": ["Functional", "Procedural"],
+      "first_appeared": 2010,
+      "usage": "Systems Programming, WebAssembly",
+      "official_site": "https://www.rust-lang.org/"
+    },
+    {
+      "name": "Swift",
+      "popularity": 65,
+      "paradigm": ["Object-Oriented", "Functional"],
+      "first_appeared": 2014,
+      "usage": "iOS Development, macOS Apps",
+      "official_site": "https://developer.apple.com/swift/"
+    },
+    {
+      "name": "Kotlin",
+      "popularity": 68,
+      "paradigm": ["Object-Oriented", "Functional"],
+      "first_appeared": 2011,
+      "usage": "Android Development, Backend",
+      "official_site": "https://kotlinlang.org/"
+    }
+  ]
+  
