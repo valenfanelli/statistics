@@ -3,17 +3,20 @@ type LanguageProps = {
     lang: Languagetype
 }
 export default function Language ({lang}: LanguageProps){
-    const {name, popularity, paradigm, first_appeared, usage, official_site} = lang;
+    const {name, popularity, paradigm, first_appeared, usage, official_site, logo} = lang;
     return <>
         <div className="language">
-            <h2 className="text-xl font-semibold">{name}</h2>
-            <p><strong>Popularity:</strong> {popularity}/100</p>
-            <p><strong>Paradigms:</strong> {paradigm.join(", ")}</p>
-            <p><strong>First appeared:</strong> {first_appeared}</p>
-            <p><strong>Usage:</strong> {usage}</p>
-            <a className="text-blue-600 language-button" href={official_site} target="_blank" rel="noopener noreferrer">
-                Official Page
-            </a>
+            <div>  
+                <h2 className="text-xl font-semibold">{name}</h2>
+                <p><strong>Popularity:</strong> {popularity}/100</p>
+                <p><strong>Paradigms:</strong> {paradigm.join(", ")}</p>
+                <p><strong>First appeared:</strong> {first_appeared}</p>
+                <p><strong>Usage:</strong> {usage}</p>
+                <a className="text-blue-600 language-button" href={official_site} target="_blank" rel="noopener noreferrer">
+                    Official Page
+                </a>
+            </div>
+            {logo}
         </div>
     </>
 }

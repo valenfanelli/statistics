@@ -8,6 +8,7 @@ export type Languagetype = {
     first_appeared: number;
     usage: string;
     official_site: string;
+    logo: string;
 }
 export default function List(){
     const [languages, setLanguages] = useState<Languagetype[]>([]);
