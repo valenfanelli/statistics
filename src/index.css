@@ -95,4 +95,14 @@ button:focus-visible {
     width: 150px; /* Define un ancho fijo para mejorar la apariencia */
     margin-left: auto;
   }  
+  .language-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    img {
+      width: 50px;
+      height: auto;
+      margin-left: 250px;
+    }
+  }
 }

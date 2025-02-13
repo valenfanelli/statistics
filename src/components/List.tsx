@@ -30,7 +30,9 @@ export default function List(){
             <h1>Languages</h1>
             <ul className="list">
                 {languages.map((item)=> (
-                    <li><Language lang={item}/></li>
+                    <li key={item.name}>
+                        <Language lang={item}/>
+                    </li>
                 ))}
             </ul>
         </div>
