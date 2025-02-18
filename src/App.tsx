@@ -5,6 +5,8 @@ import Home from './components/Home'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { RQapi } from './components/RQapi.tsx'
+import Detail from './components/Detail.tsx'
+import PaginatedQueries from './components/PaginatedQueries.tsx'
 const queryClient = new QueryClient()
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/list' element={<List/>}></Route>
                 <Route path='/react-query' element={<RQapi/>}></Route>
+                <Route path='/react-query/:postId' element={<Detail/>}></Route>
+                <Route path='/paginated-fruits' element={<PaginatedQueries/>}></Route>
             </Routes>
             {/* Values: top - bottom - left - right */}
             <ReactQueryDevtools initialIsOpen={false} position='bottom' />

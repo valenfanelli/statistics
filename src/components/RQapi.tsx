@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query"
 import axios from "axios"
 import Language from "./Language"
 import { Languagetype } from "./List";
+import { Link } from "react-router-dom";
 
 const fetchLanguages = async (): Promise<Languagetype[]> => {
     const response = await axios.get("/data/db.json");
@@ -32,9 +33,11 @@ export const RQapi = () => {
             <h2>Languages</h2>
             <button onClick={() => refetch()}>Fetch languages</button>
             {data?.map((item: Languagetype)=> (
-                <li key={item.name}>
-                    <Language lang={item}/>
-                </li>
+                <Link to={`/react-query/${item.id}`}>
+                    <li key={item.id}>
+                        <Language lang={item}/>
+                    </li>
+                </Link>
             ))}
         </>
     )

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchLanguages } from "../api/api.ts";
 import Language from "./Language.tsx";
 export type Languagetype = {
+    id: string;
     name: string;
     popularity: number;
     paradigm: string[];
@@ -30,7 +31,7 @@ export default function List(){
             <h1>Languages</h1>
             <ul className="list">
                 {languages.map((item)=> (
-                    <li key={item.name}>
+                    <li key={item.id}>
                         <Language lang={item}/>
                     </li>
                 ))}

@@ -1,0 +1,28 @@
+{"fruits": [
+    { 
+        "id": "apple", 
+        "name": "Apple", 
+        "quantity": 50 
+    },
+    { 
+        "id": "banana", "name": "Banana", "quantity": 75 },
+    { 
+        "id": "orange", "name": "Orange", "quantity": 60 },
+    { 
+        "id": "grape", "name": "Grape", "quantity": 40 },
+    { "id": "strawberry", "name": "Strawberry", "quantity": 30 },
+    { "id": "pineapple", "name": "Pineapple", "quantity": 25 },
+    { "id": "watermelon", "name": "Watermelon", "quantity": 10 },
+    { "id": "mango", "name": "Mango", "quantity": 55 },
+    { "id": "kiwi", "name": "Kiwi", "quantity": 20 },
+    { "id": "blueberry", "name": "Blueberry", "quantity": 15 },
+    { "id": "peach", "name": "Peach", "quantity": 35 },
+    { "id": "pear", "name": "Pear", "quantity": 45 },
+    { "id": "cherry", "name": "Cherry", "quantity": 28 },
+    { "id": "plum", "name": "Plum", "quantity": 18 },
+    { "id": "coconut", "name": "Coconut", "quantity": 12 },
+    { "id": "pomegranate", "name": "Pomegranate", "quantity": 22 },
+    { "id": "lemon", "name": "Lemon", "quantity": 33 },
+    { "id": "lime", "name": "Lime", "quantity": 27 }
+  ]
+  }
