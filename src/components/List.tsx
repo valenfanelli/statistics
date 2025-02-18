@@ -18,7 +18,7 @@ export default function List(){
         setTimeout(()=>{
             fetchLanguages()
             .then(setLanguages)
-            .catch(()=> setError("Error loading the data"))
+            .catch((error)=> setError(error.message))
             .finally(()=> setLoading(false));
         }, 1000)
         
