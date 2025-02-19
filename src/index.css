@@ -106,3 +106,6 @@ button:focus-visible {
     }
   }
 }
+.fruit {
+  height: 200px;
+}

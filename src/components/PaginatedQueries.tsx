@@ -1,19 +1,21 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import axios from "axios"
 import { useState } from "react";
-type FruitType = {
+export type FruitType = {
     id: string,
     name: string,
     quantity: number
 }
 export default function PaginatedQueries () {
     const [page, setPage] = useState(1);
-    const fetchFruits = async (pageId: number): Promise<FruitType[]> => {
-        const response = await axios.get(`http://localhost:4000/fruits/?_limit=4&_page=${pageId}`);
+    const fetchFruits = async (pageId: number): Promise<{ data: FruitType[], pages: number, next: number | null, prev: number | null }> => {
+        const response = await axios.get(`http://localhost:4000/fruits?_page=${pageId}&_per_page=4`,
+           { headers: { 'Cache-Control': 'no-cache' }}
+    );
         return response.data; // ✅ Ahora devuelve el array `FruitType[]` directamente
     };
     
-    const {data, isLoading, isError, error} = useQuery<FruitType[]>({
+    const {data, isLoading, isError, error} = useQuery<{ data: FruitType[], pages: number, next: number | null, prev: number | null }>({
         queryKey: ["fruits", page],
         queryFn: () => fetchFruits(page),
         placeholderData: keepPreviousData,
@@ -23,10 +25,10 @@ export default function PaginatedQueries () {
     if (isError) return <h2>{(error as Error).message}</h2>;
     return (
         <div>
-            {data?.map((item: FruitType)=> (
+            {data?.data?.map((item: FruitType)=> (
                 <div key={item.id}>{item.name}</div>
             ))}
-            <button onClick={() => setPage(prev => prev - 1)} disabled={page == 0 ? true : false}>Previous Page</button>
+            <button onClick={() => setPage(prev => prev - 1)} disabled={page == 1 ? true : false}>Previous Page</button>
             <button onClick={() => setPage(prev => prev + 1)} disabled={page == 5 ? true : false}>Next Page</button>
         </div>
     )
