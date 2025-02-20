@@ -8,6 +8,7 @@ import { RQapi } from './components/RQapi.tsx'
 import Detail from './components/Detail.tsx'
 import PaginatedQueries from './components/PaginatedQueries.tsx'
 import InfiniteQueries from './components/InfiniteQueries.tsx'
+import PostRQ from './components/PostRQ.tsx'
 const queryClient = new QueryClient()
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Route path='/react-query/:postId' element={<Detail/>}></Route>
                 <Route path='/paginated-fruits' element={<PaginatedQueries/>}></Route>
                 <Route path='/infinite-fruits' element={<InfiniteQueries/>}></Route>
+                <Route path='/post' element={<PostRQ/>}></Route>
             </Routes>
             {/* Values: top - bottom - left - right */}
             <ReactQueryDevtools initialIsOpen={false} position='bottom' />
